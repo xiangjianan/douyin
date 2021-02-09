@@ -25,7 +25,8 @@ SECRET_KEY = '0lo1v-esub+x*ig2&zuih-d=v(wpzcu^vm#@^+vgo6sojx42sa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+STATIC_ROOT = '/root/static/douyin_static/'
 
 
 # Application definition
