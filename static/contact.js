@@ -1,7 +1,7 @@
 $('#content').click(function () {
     $('#content').val('');
 });
-$('h1').click(function () {
+$('#title').click(function () {
     alert(`温馨提示：
 1、下载（请使用浏览器）
 2、长视频（请耐心等待）
