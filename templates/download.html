@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/static/style.css" rel="stylesheet">
+    <link href="/static/responsive.css" rel="stylesheet">
+    <style>
+        a, a:hover, button, button:hover {
+            text-decoration-line: none;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+
+        a {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="contact_form ">
+                <a href="http://www.helloxjn.com" target="_self">
+                    <h1 style="text-align: center">抖音无水印原视频</h1>
+                </a>
+                <br>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <h2 style="text-align: center">视频解析成功</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-offset-1 col-md-10 text-center">
+                            <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"
+                               href="{{ video_url_web }}">观看
+                            </a>
+                        </div>
+                        <div class="col-md-offset-1 col-md-10 text-center">
+                            <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"
+                               href="/static/123.mp4" download="123.mp4">下载
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- end col -->
+    </div><!-- end row -->
+</div>
+
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="static/contact.js"></script>
+</html>

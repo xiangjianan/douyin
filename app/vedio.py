@@ -16,6 +16,12 @@ def get_video_url(video_url_share):
         video_url = video_url_json.get('item_list')[0].get('video').get('play_addr').get('url_list')[0]
         video_url = video_url.replace('playwm', 'play').replace('&ratio=720p', '')
         video_url_web = requests.get(url=video_url, headers=headers).url
+
+        video_title = video_url_json.get('item_list')[0].get('desc')
+        video_content = requests.get(url=video_url_web, headers=headers).content
+        with open(f'static/123.mp4', 'wb')as f:
+            f.write(video_content)
+
         return video_url_web
     except:
         return None
