@@ -2,7 +2,10 @@ $('#content').click(function () {
     $('#content').val('');
 });
 $('h1').click(function () {
-    alert('不建议解析长视频，本人的乞丐版服务器限速感人');
+    alert(`温馨提示：
+1、下载（请使用浏览器）
+2、长视频（请耐心等待）
+`);
 });
 $('#get-url').click(function () {
     $(this).css('pointer-events', 'none');
