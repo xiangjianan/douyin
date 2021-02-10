@@ -15,7 +15,8 @@
             -webkit-transition: all .5s;
             transition: all .5s;
         }
-        a{
+
+        a {
             color: #333;
         }
     </style>
@@ -30,7 +31,8 @@
                     <h1 style="text-align: center">抖音无水印原视频</h1>
                 </a>
                 <br>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form method="post">
+                    {% csrf_token %}
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
