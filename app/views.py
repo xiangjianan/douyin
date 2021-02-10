@@ -9,8 +9,8 @@ def home(request):
         video_url_web = get_video_url(video_url_share)
         if not video_url_web:
             return render(request, 'home.html', locals())
-        # return render(request, 'download.html', locals())
-        return redirect(video_url_web)
+        return render(request, 'download.html', locals())
+        # return redirect(video_url_web)
     return render(request, 'home.html', locals())
 
 
