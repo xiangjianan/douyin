@@ -24,4 +24,4 @@ def get_video_url(video_url_share):
 
         return video_url_web, video_title
     except:
-        return None
+        return None, None

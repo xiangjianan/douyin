@@ -41,11 +41,12 @@
                         </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
                             <video controls="controls" autoplay="autoplay" width="100%" loop="loop" muted="muted">
+                                <source src="{{ video_url_web }}" type="video/ogg"/>
                                 <source src="{{ video_url_web }}" type="video/mp4"/>
                             </video>
                         </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
-                            <a class="sim-btn btn-hover-new btn btn-info btn-block"
+                            <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"
                                href="/static/{{ video_title }}.mp4" download="{{ video_title }}.mp4">下载
                             </a>
                         </div>
