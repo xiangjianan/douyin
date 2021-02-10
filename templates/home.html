@@ -34,33 +34,15 @@
                 <form method="post">
                     {% csrf_token %}
                     <div class="row">
-                        {% if video_url_web %}
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <h5 style="text-align: center; color: #67C23A">解析成功</h5>
-                                </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input id="content" class="form-control" name="video_url_share" type="text"
+                                       placeholder="复制短视频分享链接">
                             </div>
-                            <div class="col-md-offset-1 col-md-10 text-center">
-                                <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"
-                                   href="{{ video_url_web }}">观看
-                                </a>
-                            </div>
-                            <div class="col-md-offset-1 col-md-10 text-center">
-                                <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"
-                                   href="/static/123.mp4" download="123.mp4">下载
-                                </a>
-                            </div>
-                        {% else %}
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input id="content" class="form-control" name="video_url_share" type="text"
-                                           placeholder="复制短视频分享链接">
-                                </div>
-                            </div>
-                            <div class="col-md-offset-1 col-md-10 text-center">
+                        </div>
+                        <div class="col-md-offset-1 col-md-10 text-center">
                             <button class="sim-btn btn-hover-new" type="submit" class="btn btn-info btn-block">解析
                             </button>
-                        {% endif %}
                         </div>
                     </div>
                 </form>
