@@ -47,8 +47,10 @@
                         </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
                             <a class="sim-btn btn-hover-new btn btn-block"
-                               href="{{ video_url_web }}" download="video.mp4">下载
+                               href="/static/video.mp4" download="video.mp4">下载
                             </a>
+                            <span onclick="downloadFile({{ video_url_web }}, 'video.mp4')" class="sim-btn btn-hover-new btn btn-block">下载2
+                            </span>
                         </div>
                     </div>
                 </form>
