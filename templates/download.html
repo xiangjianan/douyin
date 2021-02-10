@@ -40,12 +40,12 @@
                             </div>
                         </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
-                            <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"
-                               href="{{ video_url_web }}">观看
-                            </a>
+                            {#                            <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"#}
+                            {#                               href="{{ video_url_web }}">观看#}
+                            {#                            </a>#}
                             <video controls="controls" autoplay="autoplay">
-                                <source src="/static/123.mp4" type="video/ogg"/>
-                                <source src="/static/123.mp4" type="video/mp4"/>
+                                <source src="{{ video_url_web }}" type="video/ogg"/>
+                                <source src="{{ video_url_web }}" type="video/mp4"/>
                             </video>
                         </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
