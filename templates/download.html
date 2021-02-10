@@ -34,18 +34,14 @@
                 <form method="post">
                     {% csrf_token %}
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <h5 style="text-align: center; color: #67C23A">解析成功</h5>
-                            </div>
-                        </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
-                            {#                            <a class="sim-btn btn-hover-new" class="btn btn-info btn-block"#}
-                            {#                               href="{{ video_url_web }}">观看#}
-                            {#                            </a>#}
                             <video controls="controls" autoplay="autoplay" width="100%">
                                 <source src="{{ video_url_web }}" type="video/ogg"/>
                                 <source src="{{ video_url_web }}" type="video/mp4"/>
+                            </video>
+                            <video controls="controls" autoplay="autoplay">
+                                <source src="/static/123-2.mp4" type="video/ogg"/>
+                                <source src="/static/123-2.mp4" type="video/mp4"/>
                             </video>
                         </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
