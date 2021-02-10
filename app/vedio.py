@@ -19,7 +19,7 @@ def get_video_url(video_url_share):
 
         video_title = video_url_json.get('item_list')[0].get('desc')
         video_content = requests.get(url=video_url_web, headers=headers).content
-        with open(f'/root/static/douyin_static/{video_title}.mp4', 'wb')as f:
+        with open(f'/root/static/douyin_static/video.mp4', 'wb')as f:
             f.write(video_content)
 
         return video_url_web, video_title
