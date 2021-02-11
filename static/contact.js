@@ -21,6 +21,10 @@ $('#download').click(function () {
 $('#watch').click(function () {
     $('#watch').css('pointer-events', 'none');
     $('#download').css('pointer-events', 'none');
+    setTimeout(function () {
+        $('#watch').css('pointer-events', 'auto');
+        $('#download').css('pointer-events', 'auto');
+    }, 3000);
     let content = $("#content").val().trim();
     $.ajax({
         type: "POST",
