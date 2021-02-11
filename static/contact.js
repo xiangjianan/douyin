@@ -5,6 +5,7 @@ $('#title').click(function () {
     alert(`温馨提示：
 1、下载（请使用浏览器）
 2、长视频（请耐心等待）
+博客园：https://www.cnblogs.com/xiangjianan
 `);
 });
 $('#download').click(function () {
