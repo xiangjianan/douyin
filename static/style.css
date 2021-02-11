@@ -127,3 +127,20 @@
 	top: 100%;
 	left: 0px;
 }
+
+/*
+按钮
+*/
+.row {
+    position: relative;
+}
+#show {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+#down {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+}
