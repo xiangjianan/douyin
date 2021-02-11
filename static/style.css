@@ -136,11 +136,18 @@
 }
 #show {
     position: absolute;
-    top: 80px;
+    top: 85px;
     width: 100%;
 }
 #down {
     position: absolute;
-    top: 140px;
+    top: 145px;
     width: 100%;
+}
+#error{
+    position: absolute;
+    width: 200px;
+    top:60px;
+    left: 50%;
+    margin-left: -100px;
 }
