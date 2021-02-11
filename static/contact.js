@@ -11,6 +11,7 @@ $('#title').click(function () {
 $('#download').click(function () {
     $('#watch').css('pointer-events', 'none');
     $('#download').css('pointer-events', 'none');
+    $('#error').text('');
     setTimeout(function () {
         $('#watch').css('pointer-events', 'auto');
         $('#download').css('pointer-events', 'auto');
@@ -33,6 +34,7 @@ $('#watch').click(function () {
             if (!msg.error) {
                 let video_url = msg.data;
                 $('#video_url').attr("href", video_url);
+                $('#error').text('');
                 document.getElementById("video_url").click();
             } else {
                 $('#error').text('链接无效');
