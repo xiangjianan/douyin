@@ -119,4 +119,4 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-LOCALE_DIR = '/root/static/douyin_static/video.mp4'
+LOCALE_DIR = '/root/static/douyin_static/'

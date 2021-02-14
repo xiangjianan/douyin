@@ -1,5 +1,7 @@
 import requests
 import re
+import os
+import random
 from douyin import settings
 
 headers = {
@@ -22,12 +24,13 @@ def get_video_url(video_url_share):
         video_url = video_url.replace('playwm', 'play').replace('&ratio=720p', '')
         video_url_web = get_response(video_url).url
 
-        video_title = video_url_json.get('item_list')[0].get('desc')
+        # video_title = video_url_json.get('item_list')[0].get('desc')
         video_content = get_response(video_url_web).content
-        with open(settings.LOCALE_DIR, 'wb') as f:
+        video_name = 'douyin' + str(random.randint(10000000, 99999999)) + '.mp4'
+        with open(os.path.join(settings.LOCALE_DIR, video_name), 'wb') as f:
             f.write(video_content)
 
-        return video_url_web, video_title
+        return video_url_web, video_name
 
     except Exception as e:
         print(e)
