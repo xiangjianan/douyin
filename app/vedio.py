@@ -1,7 +1,6 @@
 import requests
 import re
 import os
-import random
 from douyin import settings
 from .models import Video
 
@@ -25,12 +24,12 @@ def get_video_url(video_url_share):
         video_url = video_url.replace('playwm', 'play').replace('&ratio=720p', '')
         video_url_web = get_response(video_url).url
 
-        video_obj = Video.objects.filter(video_url_web=video_url_web).first()
+        video_obj = Video.objects.filter(video_id=video_id).first()
         if video_obj:
             video_name = video_obj.video_name
         else:
-            video_name = 'douyin' + str(random.randint(10000000, 99999999)) + '.mp4'
-            Video.objects.create(video_name=video_name, video_url_web=video_url_web)
+            video_name = f'douyin{video_id}.mp4'
+            Video.objects.create(video_name=video_name, video_id=video_id)
             video_content = get_response(video_url_web).content
             with open(os.path.join(settings.LOCALE_DIR, video_name), 'wb') as f:
                 f.write(video_content)
