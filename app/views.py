@@ -10,5 +10,4 @@ def home(request):
         if not video_url_web:
             return render(request, 'home.html', locals())
         return render(request, 'download.html', locals())
-        # return redirect(video_url_web)
     return render(request, 'home.html', locals())

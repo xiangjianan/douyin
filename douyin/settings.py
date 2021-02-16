@@ -119,4 +119,5 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
+# 视频在服务器中的存储位置
 LOCALE_DIR = '/root/static/douyin_static/'
