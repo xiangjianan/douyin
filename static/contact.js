@@ -2,11 +2,9 @@ $('#content').click(function () {
     $('#content').val('');
 });
 $('#title').click(function () {
-    alert(`温馨提示：
+    alert(`提示：
 1、下载（请使用浏览器）
-2、长视频（请耐心等待）
-博客园：https://www.cnblogs.com/xiangjianan
-`);
+2、长视频（请耐心等待）`);
 });
 $('#download').click(function () {
     $('#watch').css('pointer-events', 'none');
