@@ -27,7 +27,7 @@ $('#watch').click(function () {
     $.ajax({
         type: "POST",
         dataType: "text",
-        url: 'http://8.130.48.251:8088/api/douyin',
+        url: 'http://8.130.48.251:8087/api/douyin',
         data: {
             "video_url_share": content,
         },
@@ -47,4 +47,7 @@ $('#watch').click(function () {
     });
 });
 
-console.log("一起聊聊编程、聊聊梦想，我的微信号：inMyLife2021");
+console.log(`喜欢看源码？去我的仓库逛逛吧！
+GitHub https://github.com/xiangjianan
+Gitee  https://gitee.com/xiangjianan
+个人网站 http://www.helloxjn.com`);
