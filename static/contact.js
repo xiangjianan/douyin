@@ -47,7 +47,9 @@ $('#watch').click(function () {
     });
 });
 
-console.log(`喜欢看源码？去我的仓库逛逛吧！
-GitHub https://github.com/xiangjianan
-Gitee  https://gitee.com/xiangjianan
-个人网站 http://www.helloxjn.com`);
+console.log(`
+博客园：https://www.cnblogs.com/xiangjianan/
+
+微信：inMyLife2021
+
+`);
