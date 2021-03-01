@@ -50,6 +50,4 @@ $('#watch').click(function () {
 console.log(`
 博客园：https://www.cnblogs.com/xiangjianan/
 
-微信：inMyLife2021
-
 `);
