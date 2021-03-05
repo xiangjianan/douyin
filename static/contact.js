@@ -27,7 +27,7 @@ $('#watch').click(function () {
     $.ajax({
         type: "POST",
         dataType: "text",
-        url: 'http://8.130.48.251:8087/api/douyin',
+        url: 'https://dy.helloxjn.com/api/douyin',
         data: {
             "video_url_share": content,
         },
