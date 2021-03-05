@@ -48,7 +48,7 @@ $('#watch').click(function () {
 });
 
 console.log(`
-Email :\txjn9872@163.com
+Email :\tXJN9872@163.com
 
 WeChat:\tinMyLife2021
 
