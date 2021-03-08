@@ -25,35 +25,31 @@
 </head>
 <body>
 
-<div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="contact_form ">
-                <a href="/" target="_self">
-                    <h1 style="text-align: center">抖音无水印原视频</h1>
-                </a>
-                <br>
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <h5 style="text-align: center; color: #67C23A">解析成功</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-offset-1 col-md-10 text-center">
-                            <video controls="controls" autoplay="autoplay" width="100%" loop="loop" muted="muted">
-                                <source src="{{ video_url_web }}" type="video/mp4"/>
-                            </video>
-                        </div>
-                        <div class="col-md-offset-1 col-md-10 text-center">
-                            <a id="download-btn" href="/static/video/{{ video_name }}" download="{{ video_name }}"></a>
-                        </div>
+<div class="col-md-12">
+    <div class="contact_form ">
+        <a href="/" target="_self">
+            <h1 style="text-align: center">抖音无水印原视频</h1>
+        </a>
+        <br>
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h5 style="text-align: center; color: #67C23A">解析成功</h5>
                     </div>
-                </form>
+                </div>
+                <div class="col-md-offset-1 col-md-10 text-center">
+                    <video controls="controls" autoplay="autoplay" width="100%" loop="loop" muted="muted">
+                        <source src="{{ video_url_web }}" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="col-md-offset-1 col-md-10 text-center">
+                    <a id="download-btn" href="/static/video/{{ video_name }}" download="{{ video_name }}"></a>
+                </div>
             </div>
-        </div><!-- end col -->
-    </div><!-- end row -->
+        </form>
+    </div>
 </div>
 </body>
 <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -61,6 +57,6 @@
 <script>
     setTimeout(function () {
         $('#download-btn')[0].click();
-    },300)
+    }, 300)
 </script>
 </html>

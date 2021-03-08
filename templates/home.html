@@ -25,39 +25,35 @@
 </head>
 <body>
 
-<div>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="contact_form ">
-                <h1 id="title" style="text-align: center">抖音无水印原视频</h1>
-                <br>
-                <div class="row">
-                    <form method="post">
-                        {% csrf_token %}
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input id="content" class="form-control" name="video_url_share" type="text"
-                                       placeholder="复制短视频分享链接">
-                                <span id="error" style="color: red; text-align: center;"></span>
-                            </div>
-                        </div>
-                        <div id="down" class="col-md-12 text-center">
-                            <button id="download" class="sim-btn btn-hover-new btn btn-block" type="submit">下载
-                            </button>
-                        </div>
-                    </form>
-                    <div id="show" class="col-md-12 text-center">
-                        <button id="watch" class="sim-btn btn-hover-new btn btn-block">观看
-                        </button>
+<div class="col-md-8 col-md-offset-2">
+    <div class="contact_form ">
+        <h1 id="title" style="text-align: center">抖音无水印原视频</h1>
+        <br>
+        <div class="row">
+            <form method="post">
+                {% csrf_token %}
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input id="content" class="form-control" name="video_url_share" type="text"
+                               placeholder="复制短视频分享链接">
+                        <span id="error" style="color: red; text-align: center;"></span>
                     </div>
                 </div>
-                <a id="video_url" rel="nofollow noreferrer" href="#"></a>
+                <div id="down" class="col-md-12 text-center">
+                    <button id="download" class="sim-btn btn-hover-new btn btn-block" type="submit">下载
+                    </button>
+                </div>
+            </form>
+            <div id="show" class="col-md-12 text-center">
+                <button id="watch" class="sim-btn btn-hover-new btn btn-block">观看
+                </button>
             </div>
-        </div><!-- end col -->
-    </div><!-- end row -->
+        </div>
+        <a id="video_url" rel="nofollow noreferrer" href="#"></a>
+    </div>
 </div>
 <div class="copyrights">
-    <div class="container">
+    <div class="">
         <p class="footer-links text-center">
             Copyright © 2021 <a href="https://www.helloxjn.com" target="_target">xiangjianan</a>
         </p>
