@@ -1,11 +1,7 @@
+// 页面高度
 $('body').height($(window).height());
 $('#content').click(function () {
     $('#content').val('');
-});
-$('#title').click(function () {
-    alert(`提示：
-1、下载（请使用浏览器）
-2、长视频（请耐心等待）`);
 });
 $('#download').click(function () {
     $('#watch').css('pointer-events', 'none');
@@ -41,6 +37,9 @@ $('#watch').click(function () {
                 document.getElementById("video_url").click();
             } else {
                 $('#error').text('链接无效');
+                setTimeout(function () {
+                    $('#error').text('');
+                },1000)
             }
             $('#watch').css('pointer-events', 'auto');
             $('#download').css('pointer-events', 'auto');

@@ -46,6 +46,10 @@ body {
     transition: all 0.3s;
 }
 
+.readme p a:hover,
+.readme p a,
+.contact_form h1 a:hover,
+.contact_form h1 a,
 .btn-hover-new span {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -79,6 +83,13 @@ body {
     padding: 40px 0 10px;
     background-color: #f2f3f5;
     border-radius: 0.3em;
+}
+.readme p a{
+    color: #999;
+}
+.readme p a:hover,
+.contact_form h1 a:hover {
+    color: darkorange;
 }
 
 .contact_form .form-control {
@@ -190,5 +201,16 @@ body {
     width: 100%;
     text-align: left;
     padding: 25px 0 !important;
+    overflow: hidden;
+}
+
+/*说明*/
+.readme {
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
     overflow: hidden;
 }
