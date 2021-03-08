@@ -50,6 +50,9 @@
 	.footer-distributed .footer-left{
 		text-align: center;
 	}
+	.sim-btn{
+		width: 80%;
+	}
 }
 @media (max-width: 767px) {
 	#mainNav {
@@ -97,6 +100,9 @@
 	}
 	.footer-distributed .footer-left{
 		text-align: center;
+	}
+	.sim-btn{
+		width: 80%;
 	}
 }
 @media only screen and (min-width: 280px) and (max-width: 599px) {
@@ -159,5 +165,7 @@
 	.footer-distributed .footer-left{
 		text-align: center;
 	}
-	
+	.sim-btn{
+		width: 80%;
+	}
 }

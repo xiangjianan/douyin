@@ -47,9 +47,7 @@
                             </video>
                         </div>
                         <div class="col-md-offset-1 col-md-10 text-center">
-                            <a class="sim-btn btn-hover-new btn btn-block" href="/static/video/{{ video_name }}"
-                               download="{{ video_name }}">下载
-                            </a>
+                            <a id="download-btn" href="/static/video/{{ video_name }}" download="{{ video_name }}"></a>
                         </div>
                     </div>
                 </form>
@@ -57,8 +55,12 @@
         </div><!-- end col -->
     </div><!-- end row -->
 </div>
-
 </body>
 <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="static/contact.js"></script>
+<script>
+    setTimeout(function () {
+        $('#download-btn')[0].click();
+    },300)
+</script>
 </html>

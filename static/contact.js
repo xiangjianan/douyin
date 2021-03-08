@@ -1,3 +1,4 @@
+$('body').height($(window).height());
 $('#content').click(function () {
     $('#content').val('');
 });

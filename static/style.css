@@ -1,26 +1,33 @@
-.btn-hover-new{
-	color: #333333;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
-	position: relative;
-	border: 1px solid #333333;
-	overflow: hidden;
-	padding: 0px 18px;
-	display: inline-block;
+body {
+    background-color: #f2f3f5;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
 }
 
-.sim-btn{
-	line-height: 55px;
+.btn-hover-new {
+    color: #333333;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0px 18px;
+    display: inline-block;
+}
+
+.sim-btn {
+    line-height: 55px;
     height: 55px;
-    width: 70%;
-    /* border-radius: 10px; */
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 0px;
-	cursor: pointer;
+    width: 60%;
+    border-radius: 0.3em;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .btn-hover-new::after {
@@ -46,15 +53,17 @@
     transition: all 0.3s;
 }
 
-.btn-hover-new:hover{
-	color: #ffffff;
-	background-color: #333333;
+.btn-hover-new:hover {
+    color: #ffffff;
+    background-color: #333333;
 }
+
 .btn-hover-new:hover > span {
     opacity: 0;
-    -webkit-transform: translate(0px,40px);
-    transform: translate(0px,40px);
+    -webkit-transform: translate(0px, 40px);
+    transform: translate(0px, 40px);
 }
+
 .btn-hover-new:hover::after {
     opacity: 1;
     -webkit-transform: translate(0, 0);
@@ -68,22 +77,24 @@
 
 .contact_form {
     padding: 40px 30px 10px 30px;
+    background-color: #f2f3f5;
+    border-radius: 0.3em;
 }
 
 .contact_form .form-control {
-    background-color: #333333;
+    background-color: rgba(33, 33, 33, 0.88);
     margin-bottom: 30px;
-    border: 1px solid #ebebeb;
+    border: none;
     box-sizing: border-box;
-    color: #bcbcbc;
+    color: #efefef;
     font-size: 16px;
     outline: 0 none;
     padding: 10px 25px;
     height: 55px;
     resize: none;
-    box-shadow: none !important;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
     width: 100%;
-	border-radius: 0px;
+    border-radius: 0.3em;
 }
 
 .contact_form textarea {
@@ -110,22 +121,22 @@
 }
 
 
-#contact .section-title p{
-	color: #ffffff;
+#contact .section-title p {
+    color: #ffffff;
 }
 
-.contact_form textarea.form-control{
-	min-height: 110px;
+.contact_form textarea.form-control {
+    min-height: 110px;
 }
 
-.form-group{
-	position: relative;
+.form-group {
+    position: relative;
 }
 
-.help-block{
-	position: absolute;
-	top: 100%;
-	left: 0px;
+.help-block {
+    position: absolute;
+    top: 100%;
+    left: 0px;
 }
 
 /*
@@ -134,20 +145,50 @@
 .row {
     position: relative;
 }
+
 #show {
     position: absolute;
     top: 85px;
     width: 100%;
 }
+
 #down {
     position: absolute;
-    top: 145px;
+    top: 150px;
     width: 100%;
 }
-#error{
+
+#error {
     position: absolute;
     width: 200px;
-    top:60px;
+    top: 60px;
     left: 50%;
     margin-left: -100px;
+}
+
+/*页脚*/
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links, .footer-links a {
+    color: #999;
+    text-decoration: none;
+}
+
+.footer-links a:hover, .footer a:hover {
+    color: #ddd !important;
+}
+
+.copyrights {
+    position: absolute;
+    bottom: 0;
+    background-color: #333333;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 25px 0 !important;
+    overflow: hidden;
 }
