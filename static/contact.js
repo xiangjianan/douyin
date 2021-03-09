@@ -48,9 +48,9 @@ $('#watch').click(function () {
 });
 
 console.log(`
-Email :\tXJN9872@163.com
+Email :\txiang9872@gmail.com
 
-WeChat:\tinMyLife2021
+GitHub:\thttps://github.com/xiangjianan
 
 Page  :\twww.helloxjn.com
 
