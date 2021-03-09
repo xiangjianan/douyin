@@ -48,10 +48,10 @@ $('#watch').click(function () {
 });
 
 console.log(`
-Email :\txiang9872@gmail.com
+GitHub: https://github.com/xiangjianan
 
-GitHub:\thttps://github.com/xiangjianan
+Email: xiang9872@gmail.com
 
-Page  :\twww.helloxjn.com
+Page: www.helloxjn.com
 
 `);
