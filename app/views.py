@@ -9,5 +9,6 @@ def home(request):
         video_url_web, video_name = get_video_url(video_url_share)
         if not video_url_web:
             return render(request, 'home.html', locals())
+        video_url_web = video_url_web.replace('http:', 'https:')
         return render(request, 'download.html', locals())
     return render(request, 'home.html', locals())
