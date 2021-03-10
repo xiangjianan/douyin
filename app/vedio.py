@@ -18,18 +18,19 @@ def get_video_url(video_url_share):
         video_url_share = re.findall('https.*/', video_url_share)[0]
         video_url_redirect = get_response(video_url_share).url
         video_id = re.findall(r'video/(\d+)/', str(video_url_redirect))[0]
-        video_url_api = f'https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids={video_id}'
-        video_url_json = get_response(video_url_api).json()
-        video_url = video_url_json.get('item_list')[0].get('video').get('play_addr').get('url_list')[0]
-        video_url = video_url.replace('playwm', 'play').replace('&ratio=720p', '')
-        video_url_web = get_response(video_url).url
 
         video_obj = Video.objects.filter(video_id=video_id).first()
         if video_obj:
+            video_url_web = video_obj.video_url_web
             video_name = video_obj.video_name
         else:
+            video_url_api = f'https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids={video_id}'
+            video_url_json = get_response(video_url_api).json()
+            video_url = video_url_json.get('item_list')[0].get('video').get('play_addr').get('url_list')[0]
+            video_url = video_url.replace('playwm', 'play').replace('&ratio=720p', '')
+            video_url_web = get_response(video_url).url
             video_name = f'douyin{video_id}.mp4'
-            Video.objects.create(video_name=video_name, video_id=video_id)
+            Video.objects.create(video_name=video_name, video_id=video_id, video_url_web=video_url_web)
             # 视频转存到服务器
             # video_content = get_response(video_url_web).content
             # with open(os.path.join(settings.LOCALE_DIR, video_name), 'wb') as f:
