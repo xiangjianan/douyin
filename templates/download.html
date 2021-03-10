@@ -45,7 +45,9 @@
                     </video>
                 </div>
                 <div class="col-md-offset-1 col-md-10 text-center">
-                    <a id="download-btn" class="sim-btn btn-hover-new btn btn-block" href="/static/video/{{ video_name }}" download="{{ video_name }}">下载</a>
+                    {#                    <a id="download-btn" class="sim-btn btn-hover-new btn btn-block"#}
+                    {#                       href="/static/video/{{ video_name }}" download="{{ video_name }}">下载</a>#}
+                    <span id="download-btn2" class="sim-btn btn-hover-new btn btn-block">下载</span>
                 </div>
             </div>
         </form>
@@ -56,7 +58,28 @@
 <script src="static/contact.js"></script>
 <script>
     setTimeout(function () {
-        $('#download-btn')[0].click();
+        $('#download-btn2')[0].click();
     }, 300)
+    let downloadUrlFile = function (url) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'blob';
+        xhr.onload = () => {
+            if (xhr.status === 200) {
+                // 获取blob数据并保存
+                const blob = new Blob([xhr.response], {type: "video/mp4"})
+                const a = document.createElement("a")
+                a.href = URL.createObjectURL(blob)
+                a.download = "{{ video_name }}"
+                a.click()
+                URL.revokeObjectURL(a.href)
+                a.remove();
+            }
+        };
+        xhr.send();
+    }
+    $('#download-btn2').click(function () {
+        downloadUrlFile('{{ video_url_web }}');
+    })
 </script>
 </html>

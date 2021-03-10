@@ -30,9 +30,10 @@ def get_video_url(video_url_share):
         else:
             video_name = f'douyin{video_id}.mp4'
             Video.objects.create(video_name=video_name, video_id=video_id)
-            video_content = get_response(video_url_web).content
-            with open(os.path.join(settings.LOCALE_DIR, video_name), 'wb') as f:
-                f.write(video_content)
+            # 视频转存到服务器
+            # video_content = get_response(video_url_web).content
+            # with open(os.path.join(settings.LOCALE_DIR, video_name), 'wb') as f:
+            #     f.write(video_content)
 
         return video_url_web, video_name
 
