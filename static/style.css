@@ -91,7 +91,10 @@ body {
 .contact_form h1 a:hover {
     color: darkorange;
 }
-
+.contact_form h1{
+    margin-top: 120px;
+    margin-bottom: 70px;
+}
 .contact_form .form-control {
     background-color: rgba(33, 33, 33, 0.88);
     margin-bottom: 30px;
@@ -159,13 +162,13 @@ body {
 
 #show {
     position: absolute;
-    top: 85px;
+    top: 100px;
     width: 100%;
 }
 
 #down {
     position: absolute;
-    top: 150px;
+    top: 170px;
     width: 100%;
 }
 
