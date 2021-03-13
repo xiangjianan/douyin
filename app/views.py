@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from .vedio import get_video_url
+from django.shortcuts import render
+from utils.vedio import get_video_url
 
 
 def home(request):
