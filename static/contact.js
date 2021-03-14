@@ -1,25 +1,15 @@
 // 页面高度
 $('body').height($(window).height());
+$('.loading').height($(window).height());
 $('#content').click(function () {
     $('#content').val('');
 });
 $('#download').click(function () {
-    $('#watch').css('pointer-events', 'none');
-    $('#download').css('pointer-events', 'none');
-    $('#error').text('');
-    setTimeout(function () {
-        $('#watch').css('pointer-events', 'auto');
-        $('#download').css('pointer-events', 'auto');
-    }, 3000);
+    $('.loading').css('display','block');
 });
 
 $('#watch').click(function () {
-    $('#watch').css('pointer-events', 'none');
-    $('#download').css('pointer-events', 'none');
-    setTimeout(function () {
-        $('#watch').css('pointer-events', 'auto');
-        $('#download').css('pointer-events', 'auto');
-    }, 3000);
+    $('.loading').css('display','block');
     let content = $("#content").val().trim();
     $.ajax({
         type: "POST",
@@ -40,9 +30,8 @@ $('#watch').click(function () {
                 setTimeout(function () {
                     $('#error').text('');
                 },1000)
+                $('.loading').css('display','none');
             }
-            $('#watch').css('pointer-events', 'auto');
-            $('#download').css('pointer-events', 'auto');
         },
     });
 });

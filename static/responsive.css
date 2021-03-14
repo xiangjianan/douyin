@@ -70,6 +70,10 @@
     .sim-btn {
         width: 80%;
     }
+
+    .loading {
+        top: 125px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -136,6 +140,10 @@
 
     .sim-btn {
         width: 80%;
+    }
+
+    .loading {
+        top: 125px;
     }
 }
 
@@ -231,5 +239,12 @@
 
     #down {
         top: 150px;
+    }
+
+    .loading {
+        top: 125px;
+    }
+    .loading img{
+        width: 10%;
     }
 }
