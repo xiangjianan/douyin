@@ -21,16 +21,17 @@ $('#watch').click(function () {
         success: function (msg) {
             msg = JSON.parse(msg)
             if (!msg.error) {
+                $('.loading').css('display','none');
                 let video_url = msg.data;
                 $('#video_url').attr("href", video_url);
                 $('#error').text('');
                 document.getElementById("video_url").click();
             } else {
+                $('.loading').css('display','none');
                 $('#error').text('链接无效');
                 setTimeout(function () {
                     $('#error').text('');
                 },1000)
-                $('.loading').css('display','none');
             }
         },
     });
