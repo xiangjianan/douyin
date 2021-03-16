@@ -11,3 +11,13 @@ def home(request):
             return render(request, 'home.html', locals())
         return render(request, 'download.html', locals())
     return render(request, 'home.html', locals())
+
+
+def download(request):
+    video_url_web = request.GET.get('video_url_web')
+    video_name = request.GET.get('video_name')
+    print(video_url_web)
+    print(video_name)
+    if not video_url_web:
+        return render(request, 'home.html', locals())
+    return render(request, 'download.html', locals())

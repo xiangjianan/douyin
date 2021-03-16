@@ -14,5 +14,8 @@ class TestMail(APIView):
             res.code = 1020
             res.error = "链接无效"
         else:
-            res.data = video_url_web
+            res.data = {
+                'video_url_web': video_url_web,
+                'video_name': video_name,
+            }
         return Response(res.dict)
