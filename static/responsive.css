@@ -74,6 +74,10 @@
     .loading {
         top: 125px;
     }
+
+    h1 span img {
+        width: 80%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -144,6 +148,10 @@
 
     .loading {
         top: 125px;
+    }
+
+    h1 span img {
+        width: 80%;
     }
 }
 
@@ -244,7 +252,12 @@
     .loading {
         top: 125px;
     }
-    .loading img{
+
+    .loading img {
         width: 10%;
+    }
+
+    h1 span img {
+        width: 80%;
     }
 }
