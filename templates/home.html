@@ -36,7 +36,8 @@
             margin: 62px auto;
             border-radius: 20px;
         }
-        h1 span img{
+
+        h1 span img {
             width: 30%;
         }
     </style>
@@ -90,5 +91,12 @@
 <script src="/static/contact.js"></script>
 <script>
     $('.form-group input').focus();
+    $.ajax({
+        type: "POST",
+        url: "https://www.helloxjn.com/log/",
+        data: {
+            'web': 'douyin',
+        },
+    });
 </script>
 </html>
