@@ -1,6 +1,5 @@
 // 页面高度
-$('body').height($(window).height());
-$('.loading').height($(window).height());
+$('.loading').height($(window).height()-$('.home-logo').height());
 $('#content').click(function () {
     $('#content').val('');
 });
@@ -50,7 +49,6 @@ $('#watch').click(function () {
             if (!msg.error) {
                 $('.loading').css('display','none');
                 let video_url = msg.data['video_url_web'];
-                console.log(msg.data);
                 $('#video_url').attr("href", video_url);
                 $('#error').text('');
                 document.getElementById("video_url").click();
