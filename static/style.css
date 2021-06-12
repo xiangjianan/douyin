@@ -19,6 +19,12 @@ body {
     background-color: #E4EBF8;
     font-size: 14px;
     font-family: 'Roboto Mono', monospace;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }
 
 .btn-hover-new {
