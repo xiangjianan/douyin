@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from utils.vedio import get_video_url
+from utils.my_log import logger
 
 
 def home(request):
@@ -9,6 +10,7 @@ def home(request):
         video_url_web, video_name = get_video_url(video_url_share)
         if not video_url_web:
             return render(request, 'home.html', locals())
+        logger.info(f'{video_url_web} {video_name}')
         return render(request, 'download.html', locals())
     return render(request, 'home.html', locals())
 
@@ -16,8 +18,6 @@ def home(request):
 def download(request):
     video_url_web = request.GET.get('video_url_web')
     video_name = request.GET.get('video_name')
-    print(video_url_web)
-    print(video_name)
     if not video_url_web:
         return render(request, 'home.html', locals())
     return render(request, 'download.html', locals())
