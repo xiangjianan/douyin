@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from utils.base_response import BaseResponse
 from utils.vedio import get_video_url
+from utils.my_log import logger
 
 
 class TestMail(APIView):
@@ -18,4 +19,5 @@ class TestMail(APIView):
                 'video_url_web': video_url_web,
                 'video_name': video_name,
             }
+            logger.info(f'{video_url_web}')
         return Response(res.dict)
