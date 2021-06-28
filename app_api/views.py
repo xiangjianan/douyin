@@ -19,5 +19,5 @@ class TestMail(APIView):
                 'video_url_web': video_url_web,
                 'video_name': video_name,
             }
-            logger.info(f'{video_url_web}')
+            logger.info(f'{video_url_web} {video_name}')
         return Response(res.dict)
