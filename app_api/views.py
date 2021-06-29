@@ -13,7 +13,7 @@ class TestMail(APIView):
         res_url, res_name, aweme_type = get_video_url(request.data.get('video_url_share'))
         # 视频类型
         if aweme_type == 4:
-            video_url_web, video_name = res_url, res_name
+            video_url, video_url_web, video_name = res_url[0], res_url[1], res_name
             if not video_url_web:
                 res.code = 1020
                 res.error = "链接无效"
@@ -23,7 +23,7 @@ class TestMail(APIView):
                     'video_name': video_name,
                     'aweme_type': aweme_type,
                 }
-                logger.info(f'{video_url_web} {video_name}')
+                logger.info(f'{video_url} {video_name}')
             return Response(res.dict)
         # 图集类型
         elif aweme_type == 2:

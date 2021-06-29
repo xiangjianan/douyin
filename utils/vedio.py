@@ -31,7 +31,7 @@ def get_video_url(video_url_share):
             # video_content = get_response(video_url_web).content
             # with open(os.path.join(settings.LOCALE_DIR, video_name), 'wb') as f:
             #     f.write(video_content)
-            res_url = video_url_web
+            res_url = [video_url, video_url_web]
             res_name = video_name
         # 图集类型
         elif aweme_type == 2:
