@@ -55,7 +55,7 @@
         <br>
         <div class="row">
             <div class="douyin_form">
-                <form method="post">
+                <form action="" onsubmit="$('#download').click();return false;">
                     {% csrf_token %}
                     <div class="col-md-12">
                         <div class="form-group form-group-link">
