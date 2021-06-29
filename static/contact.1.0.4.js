@@ -14,8 +14,8 @@ new Vue({
             $.ajax({
                 type: "POST",
                 dataType: "text",
-                // url: '/api/douyin',
-                url: 'https://dy.helloxjn.com/api/douyin',
+                url: '/api/douyin',
+                // url: 'https://dy.helloxjn.com/api/douyin',
                 data: {
                     "video_url_share": content,
                 },
@@ -112,7 +112,7 @@ new Vue({
 function image_show(image_url_list) {
     let image_html = `<div class="col-md-12">
                         <div class="form-group">
-                            <h5 style="text-align: center; color: #67C23A">解析链接为图集，图片提取成功</h5>
+                            <h5 style="text-align: center; color: #67C23A">视频类型为图集，图片提取成功！</h5>
                         </div>
                     </div>`;
     image_url_list.forEach(function (image_url, i) {
