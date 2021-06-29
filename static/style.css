@@ -201,3 +201,15 @@ body {
     font-size: 14px;
     overflow: hidden;
 }
+
+/*图集*/
+.image-li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.image-li img {
+    width: 100%;
+    padding: 10px;
+}
