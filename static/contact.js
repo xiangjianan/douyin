@@ -1,6 +1,6 @@
 // 页面高度
 $('.loading').height($(window).height() - $('.home-logo').height());
-$('#content').click(function () {
+$('#content').click(() => {
     $('#content').val('');
 });
 // 下载
@@ -8,7 +8,6 @@ new Vue({
     el: '#download',
     methods: {
         download() {
-            let $ele = this;
             $('.loading').css('display', 'block');
             let content = $("#content").val().trim();
             $.ajax({
@@ -19,7 +18,7 @@ new Vue({
                 data: {
                     "video_url_share": content,
                 },
-                success: function (msg) {
+                success: (msg) => {
                     msg = JSON.parse(msg)
                     if (!msg.error) {
                         $('.loading').css('display', 'none');
@@ -37,7 +36,7 @@ new Vue({
                     } else {
                         $('.loading').css('display', 'none');
                         $('.el-message__closeBtn').click();
-                        $ele.$message({
+                        this.$message({
                             message: '无效链接',
                             type: 'info',
                             center: true,
@@ -45,9 +44,9 @@ new Vue({
                             showClose: true,
                             duration: 2000,
                         });
-                        setTimeout(function () {
+                        setTimeout(() => {
                             $('#error').text('');
-                        }, 1000)
+                        }, 1000);
                     }
                 },
             });
@@ -59,7 +58,6 @@ new Vue({
     el: '#watch',
     methods: {
         watch() {
-            let $ele = this;
             $('.loading').css('display', 'block');
             let content = $("#content").val().trim();
             $.ajax({
@@ -70,7 +68,7 @@ new Vue({
                 data: {
                     "video_url_share": content,
                 },
-                success: function (msg) {
+                success: (msg) => {
                     msg = JSON.parse(msg)
                     if (!msg.error) {
                         $('.loading').css('display', 'none');
@@ -90,7 +88,7 @@ new Vue({
                     } else {
                         $('.loading').css('display', 'none');
                         $('.el-message__closeBtn').click();
-                        $ele.$message({
+                        this.$message({
                             message: '无效链接',
                             type: 'info',
                             center: true,
@@ -98,7 +96,7 @@ new Vue({
                             showClose: true,
                             duration: 2000,
                         });
-                        setTimeout(function () {
+                        setTimeout(() => {
                             $('#error').text('');
                         }, 1000)
                     }
@@ -109,21 +107,12 @@ new Vue({
 })
 
 // 渲染图集
-function image_show(image_url_list) {
-    let image_html = `<div class="col-md-12">
-                        <div class="form-group">
-                            <h5 style="text-align: center; color: #67C23A">视频类型为图集，图片提取成功！</h5>
-                        </div>
-                    </div>`;
-    image_url_list.forEach(function (image_url, i) {
-        image_html += `
-                    <div index=${i} class="image-li">
-                        <div class="col-md-6">
-                            <img src=${image_url} alt="">
-                        </div>
-                    </div>
-                `
-    });
+let image_show = (image_url_list) => {
+    let image_html = `<div class="col-md-12"><div class="form-group"><h5 style="text-align: center; color: #67C23A">视频类型为图集，图片提取成功！</h5></div></div>`;
+    let i = 0;
+    for (i in image_url_list) {
+        image_html += `<div index=${i} class="image-li"><div class="col-md-6"><img src=${image_url_list[i]} alt=""></div></div>`
+    }
     $('.row .douyin_form').html('');
     $('.readme').html('');
     $('.copyrights').remove();
@@ -133,9 +122,9 @@ function image_show(image_url_list) {
 console.log(`
 GitHub: https://github.com/xiangjianan
 
-Email: xiang9872@gmail.com
+Website: https://www.helloxjn.com
 
-Page: www.helloxjn.com
+Email: xiang9872@gmail.com
 
 `);
 
